@@ -1,0 +1,15 @@
+{% if site.quote_one_content == null %}
+{% else %}
+<div class="column col-12 text-center mt-16">
+  <h4>Trích dẫn yêu thích</h4>
+</div>
+<div class="column col-6 col-sm-12 p-8 mb-8 col-mx-auto">
+  <h5>{{ site.quote_one_author }}</h5>
+  <p>{{ site.quote_one_content }}</p>
+</div>
+<div class="column col-6 col-sm-12 p-8 mb-8 col-mx-auto">
+  <h5>{{ site.quote_two_author }}</h5>
+  <p>{{ site.quote_two_content }}</p>
+</div>
+
+{% endif %}

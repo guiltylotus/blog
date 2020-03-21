@@ -1,0 +1,7 @@
+
+{% assign words = content | number_of_words %}
+{% if words < 300 %}
+    Chỉ cần bỏ ra 1 phút thôi ^^
+{% else %}
+    Chỉ cần bỏ ra {{ words | divided_by:150 }} thôi ^^
+{% endif %}

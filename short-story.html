@@ -1,0 +1,10 @@
+---
+layout: category
+category: short-story
+title: Truyện ngắn
+---
+
+
+{% for post in site.categories.short-story %}
+  {% include article-card.html %}
+{% endfor %}
