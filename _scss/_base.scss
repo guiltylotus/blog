@@ -18,6 +18,9 @@ body {
   font-family: $body-font-family;
   font-size: $font-size;
   text-rendering: optimizeLegibility;
+  @media only screen and (max-width: 600px) {
+    width: fit-content;
+  }
 }
 
 a {
