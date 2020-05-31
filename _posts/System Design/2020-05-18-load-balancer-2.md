@@ -64,10 +64,8 @@ Nhược điểm:
 **Weighted-Round-Robin**
 Là một phương pháp cải tiến của Round-Robin, được thực hiện trên Load Balancer. Cho phép đánh trọng số (weight) với mỗi server, những server có trọng số cao hơn sẽ được Load Balancer ưu tiên cho xử lý nhiều request hơn.
 
-
 #### 2. Random Load Balancing
 Chọn ngẫu nhiên một server để xử lý request. Việc này có thể được thực hiện bởi client hoặc server
-
 - **Server-side**: Với mỗi request, Load Balancer sẽ chọn ngẫu nhiên 1 server để xử lý request.
 - **Client-side**: Server sẽ cho client biết được IP của những server trong cụm. Việc lựa chọn server nào sẽ do client quyết định.
 
@@ -84,23 +82,3 @@ Nhược điểm:
 
 **Consistent Hashing**
 1 phương pháp được sinh ra để tối ưu việc tái sử dụng cache. Các bạn có thể xem thêm tại [Consistent Hashing](https://www.youtube.com/watch?v=zaRkONvyGr8) được giải thích bởi anh Gaurav Sen.
-
-
-### III. Load Balancer được đặt ở những layer nào trong hệ thống?
-
-**Các bạn có thắc mắc như ví dụ ở trên, Load Balancer (website khautrangbaba.com) hoàn toàn có thể bị quả tải khi lượng request nhiều lên không?**
-
-<div class="text-center">
-    <img src="{{ site.baseurl }}/assets/load_balancer/client_lbs_server.jpg" alt="client_lbs_server"
-        title="Client, Load Balancer and servers" style="width: 50%"/>
-</div>
-
-
-Trên thực tế mỗi service không chỉ có 1 Load Balancer. Các Load Balancer 1, 2 sẽ quản lý các Load Balancer ở layer thấp hơn, tương ứng 1.1, 1.2, 2.1, ..., để đảm bảo **High availability** cho hệ thống. Load Balancer 1 và 2 có thể giao tiếp trực tiếp với nhau để phân chia lượng request. 
-
-Load Balancer có thể được đặt ở rất nhiều layer:
-- DNS layer.
-- Giữa client và server.
-- Giữa server và database.
-- Giữa chính những Load Balancer khác. 
-
