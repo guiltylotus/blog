@@ -3,7 +3,7 @@ layout: post
 title: "Load Balancer"
 category: system-design
 author: lotus
-short-description: Load Balancer có thể đặt ở những layer nào?
+short-description: Load Balancer là gì? Sử dụng thuật toán gì? Được đặt ở đâu?
 ---
 
 -----
@@ -116,7 +116,9 @@ DNS sẽ thực hiện chia requests vào các server theo thuật toán Round-R
 
 ## 2. Ở giữa Client và Server
 ## 3. Ở giữa Server và Database
+## 4. Có thể là software
 
 # IV. Nhược điểm
 
 ## Single point of failure
+## Latency
