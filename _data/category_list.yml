@@ -2,8 +2,8 @@
 
 
 system-design:
-  name: Thiết kế hệ thống
-  description: Chia sẻ kiến thức về thiết kế hệ thống
-short-story:
-  name: Truyện ngắn
-  description: kể chuyện, tâm sự xàm xí ^^
+  name: Kiến thức cơ bản về hiết kế hệ thống
+  description: Chia sẻ kiến thức cơ bản về thiết kế hệ thống
+system-design-questions:
+  name: Thực hành thiết kế hệ thống
+  description: Nhưng câu hỏi thường gặp khi phỏng vấn
